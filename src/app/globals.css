@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.myTourSlides,
+.reviewSlider {
+  padding-bottom: 40px !important;
+}
+.is-sticky {
+  margin: 0 !important;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.bg-dark-nav {
+  background-color: #051036 !important;
+}
+.reviewSlider .swiper-button-prev,
+.reviewSlider .swiper-button-next {
+  display: none !important;
+}
+.includedSection ul li {
+  position: relative;
+}
+.includedSection ul li::before {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 15px;
+  top: 9px;
+  left: -9%;
+  margin-right: 5px;
+  transform: translate(0%, -50%);
+  background-image: url("../../public/assets/images/Check.svg");
+  background-size: cover;
+}
+.excludedSection ul li {
+  position: relative;
+}
+.excludedSection ul li::before {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 15px;
+  top: 9px;
+  left: -9%;
+  transform: translate(0%, -50%);
+  background-image: url("../../public/assets/images/X.svg");
+  background-size: cover;
+}
+@media only screen and (max-width: 786px) {
+  .gallerySingelTour .swiper-button-prev,
+  .gallerySingelTour .swiper-button-next {
+    display: none !important;
+  }
+}
+.twark {
+  position: relative;
+  animation: 2s 2s infinite wiggle;
+  cursor: pointer;
+}
+.twark:hover {
+  animation-name: shakeAnim;
+}
+
+@keyframes wiggle {
+  5%,
+  50% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  15% {
+    transform: scale(1.15);
+  }
+  20% {
+    transform: scale(1.15) rotate(-5deg);
+  }
+  25% {
+    transform: scale(1.15) rotate(5deg);
+  }
+  30% {
+    transform: scale(1.15) rotate(-3deg);
+  }
+  35% {
+    transform: scale(1.15) rotate(2deg);
+  }
+  40% {
+    transform: scale(1.15) rotate(0);
+  }
+}
+.textEditor a {
+  text-decoration: underline !important;
+  color: rgb(34, 7, 153) !important;
+}
+.textEditor h2,
+.textEditor h3,
+.textEditor h4 {
+  color: rgb(0, 0, 0) !important;
+  font-weight: bold;
+}
